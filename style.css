@@ -79,6 +79,8 @@ select{
      right: 0;
      padding: 1rem;
      cursor: pointer;
+     transition: all 0.3s ease;
+     pointer-events: none;
 }
 
 .select:hover::after{
@@ -94,7 +96,7 @@ select{
 }
 
 .todo-list{
-    min-height: 30%;
+    min-width: 30%;
     list-style: none;
 }
 
@@ -106,6 +108,8 @@ select{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 25rem;
+    transition: .5s all ease;
 }
 
 .todo li{
@@ -121,6 +125,7 @@ select{
     padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
+   
 }
 
 .complete-btn{
@@ -130,6 +135,7 @@ select{
 .fa-check-circle,
 .fa-minus-circle {
     font-size: 1.5rem;
+    pointer-events: none;
 }
 
 
@@ -156,4 +162,15 @@ select{
 
 .alert-success{
     background-color: #5ebe92;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(360deg);
+    opacity: 0;
+}
+
+
+.completed {
+    opacity: 0.5;
+    text-decoration: line-through;
 }
